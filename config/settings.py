@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'voitures',
     'clients',
     'locations',
-    'dashboard'
+    'dashboard',
+    'drf_spectacular'
 ]
 
 MIDDLEWARE = [
@@ -138,6 +139,7 @@ MAILERS = {
 
 
 REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS':'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': [
@@ -149,4 +151,13 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
+    
+}
+
+SPECTACULAR_SETTINGS={
+    'TITLE':'API Gestion de Location Voiture',
+    'DESCRIPTION':'API REST Professionnelle de gestion de locations de voitures',
+    'VERSION':'1.0.0',
+    'SERVE_INCLUDE_SCHEMA':False,
+    'COMPONENT_SPLIT_REQUEST':True
 }
