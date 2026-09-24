@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django_filters',
     'voitures',
     'clients',
-    'locations'
+    'locations',
+    'dashboard'
 ]
 
 MIDDLEWARE = [
