@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+from django.shortcuts import render
+
+# Create your views here.
+=======
 from rest_framework import viewsets
 
 from .models import Categorie
@@ -11,3 +16,4 @@ class CategorieViewSet(viewsets.ModelViewSet):
     search_fields=['nom','description']
     ordering_fields=['nom','created_at']
     ordering=['nom']
+>>>>>>> develop
